@@ -20,7 +20,9 @@ module.exports = {
       colors: {
         colorfull: {
           darkblue : "#141d38",
-          darkpurple: "#211e3b"
+          darkpurple: "#211e3b",
+          lightpurple: "#aeaacb",
+          lightblue :"#43baff"
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

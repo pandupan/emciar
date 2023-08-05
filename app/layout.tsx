@@ -9,7 +9,7 @@ const nunito_Sans = Nunito_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Emciar - All Talents Found & Connected',
-  description: 'Emciar is a comprehensive platform that connects and showcases all talents, providing a hub for discovering and nurturing creative individuals worldwide.',
+  description: 'Emciar is innately talented at connecting talents and clients.',
 }
 
 export default function RootLayout({

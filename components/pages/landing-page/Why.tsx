@@ -8,7 +8,9 @@ const Why = () => {
   return (
     <div className="container mx-auto mt-64 md:mt-28 mb-12">
       <div>
-        <p className="font-black sm:text-4xl text-2xl text-center sm:m-16 mb-28 ">Why Emciar?</p>
+        <p className="font-black sm:text-4xl text-2xl text-center sm:m-16 mb-28 ">
+          Why Emciar?
+        </p>
       </div>
       <div className="flex flex-col sm:flex-row sm:items-start items-center md:gap-20 lg:gap-24 xl:gap-24 justify-center flex-wrap">
         <div className="flex flex-col  items-center md:w-[90px] lg:w-[120px] xl:w-[180px] w-[200px]">
@@ -24,9 +26,7 @@ const Why = () => {
         </div>
         <div className="flex flex-col items-center md:w-[90px] lg:w-[120px] xl:w-[180px] w-[200px] sm:mt-0 mt-28">
           <FaRegEye size={55} />
-          <p className="text-center font-extrabold text-xl my-4">
-            Transparent
-          </p>
+          <p className="text-center font-extrabold text-xl my-4">Transparent</p>
           <p className="text-[#6d6d6d] text-center">
             Our clients have complete visibility over our entire operations and
             delivery process with dedicated single point of contacts to ensure

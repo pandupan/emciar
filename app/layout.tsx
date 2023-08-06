@@ -21,10 +21,12 @@ export default function RootLayout({
     <html lang="id">
       <>
         <body className={nunito_Sans.className}>
-          <Header/>
-          <Navbar/>
-            {children}
-          <Footer/> 
+          <div className="overflow-x-hidden">
+            <Header/>
+            <Navbar/>
+              {children}
+            <Footer/> 
+          </div>
         </body>
       </>
     </html>

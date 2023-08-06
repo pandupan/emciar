@@ -5,7 +5,7 @@ import { FaLinkedinIn } from 'react-icons/fa'
 
 const Header = () => {
   return (
-    <div className='hidden lg:flex w-full justify-between bg-colorfull-darkblue h-[45px] text-sm font-light'>
+    <div className='hidden lg:flex w-full justify-between bg-colorfull-darkblue h-[45px] text-sm font-light z-[10]'>
       <div className='flex justify-center items-center gap-8 ml-16'>
         <div className='flex items-center justify-center text-white gap-2'>
           <MdEmail size={15}/>

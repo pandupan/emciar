@@ -55,7 +55,8 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="fixed w-full h-full z-[100]">
+    {/*Header*/}
+    <div className="fixed w-full h-auto z-[2]">
       {header &&         
         <div className='hidden xl:flex  w-full justify-between bg-colorfull-darkblue h-[45px] text-sm font-light z-[10]'>
           <div className='flex justify-center items-center gap-8 ml-16'>
@@ -110,6 +111,7 @@ const Navbar = () => {
         }
       />
 
+      {/*Navbar*/}
       <div
         className={
           nav
@@ -147,6 +149,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/*Search*/}
       <div className="xl:hidden flex justify-between items-center w-full sticky h-[90px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)]">
         <Image
           src="/images/emciar-logo.png"
@@ -173,6 +176,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+
     </>
   );
 };

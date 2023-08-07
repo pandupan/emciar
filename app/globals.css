@@ -77,14 +77,6 @@
   }
 }
 
-.hero-img {
-  background-position: 90% center; /* Initial background position for larger screens */
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (max-width: 640px) {
-  .hero-img {
-    background-position: 75%; /* Adjusted background position for screens up to 640px width */
-  }
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
 }

@@ -51,7 +51,7 @@ const Hero = () => {
         modules={[Pagination, Autoplay]}
         spaceBetween={10}
         slidesPerView={1}
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: true }}
         ref={swiperRef}
         autoplay={{
           delay: 5000,
@@ -62,16 +62,18 @@ const Hero = () => {
       >
         {imageSlider.map((item)=>(
           <SwiperSlide key={item.id}>
-            <div className="container w-full h-full absolute text-white z-20">
-              <div className='mt-[130px] p-20 ml-20 space-y-4'>
-                <h3 className='text-2xl font-normal'>{item.subsection}</h3>
-                <h1 className="text-7xl font-black">{item.section}</h1>
-                <button className='w-[150px] h-[40px] bg-colorfull-lightblue hover:bg-colorfull-purple ml-6 z-[30]'>
-                  Learn More
-                </button>
+            <div className="container w-auto sm:ml-18 xl:ml-20 h-auto absolute text-white z-20">
+              <div className='mt-[110px] xl:mt-[210px] sm:p-20 sm:space-y-4'>
+                <h3 className='hidden md:block text-2xl font-normal'>{item.subsection}</h3>
+                <div className='space-y-2 sm:space-y-6'>
+                  <h1 className="text-xl sm:text-7xl xl:8xl font-black font-montserrat ">{item.section}</h1>
+                  <button className='text-xs sm:text-base w-[80px] h-[30px] sm:w-[150px] sm:h-[50px] bg-colorfull-lightblue hover:bg-colorfull-purple  sm:ml-32 z-[20]'>
+                    Learn More
+                  </button>
+                </div>
               </div>
             </div>
-            <div className='w-full h-full absolute flex justify-between items-center z-[20]'>
+            <div className='hidden w-full h-full absolute md:flex justify-between items-center z-[19]'>
               <button onClick={slidePrev} className="flex justify-center items-center w-[50px] h-[110px] bg-transparent hover:bg-colorfull-lightblue text-white border-[1px] border-white m-2 ml-4 p-1">
                 <BsArrowLeft size={15}/>
               </button>
@@ -80,7 +82,7 @@ const Hero = () => {
               </button>
             </div>
             <div
-              className='w-full sm:h-[100vh] h-[400px] z-[2] absolute bg-no-repeat top-0 right-0 bg-center bg-cover'
+              className='w-full sm:h-[100vh] h-[350px] z-[2] absolute bg-no-repeat top-0 right-0 bg-center bg-cover'
               style={{
                 backgroundImage: `url(${item.imageUrl})`,
               }}

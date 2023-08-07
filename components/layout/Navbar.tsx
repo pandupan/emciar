@@ -18,10 +18,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { MdEmail } from 'react-icons/md'
+import { BsFillClockFill } from  'react-icons/bs'
+import { FaLinkedinIn } from 'react-icons/fa'
+
 
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = React.useState(true);
   const [nav, setNav] = React.useState(false);
+  const [header, setHeader] = React.useState(true);
 
   const toggleSearch = () => {
     setSearchOpen((prevSearchOpen) => !prevSearchOpen);
@@ -31,32 +36,72 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 95) {
+      setHeader(false);
+    } else {
+      setHeader(true);
+    }
+  };
+
+
   return (
     <>
-      <div className="hidden xl:flex w-full sticky h-[95px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)] z-[10]">
-        <Image
-          src="/images/emciar-logo.png"
-          width={90}
-          height={90}
-          alt="Logo"
-          className="ml-4 sm:ml-12 lg:ml-16 sm:p-2"
-        />
-        <Popover>
-          <div className="flex text-justify-center items-center px-2 font-bold ml-20 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
-            <PopoverTrigger>Home</PopoverTrigger>
-            <IoMdArrowDropdown />
-            <PopoverContent className="uppercase ml-[190px] mt-8 gap-1">
-              <div className="flex flex-col justify-center font-bold text-sm py-4">
-                <div className="py-2 hover:text-blue-500">Recruitment</div>
-                <div className="py-2 hover:text-blue-500">Job Counseling</div>
-              </div>
-            </PopoverContent>
+    <div className="fixed w-full h-full z-[100]">
+      {header &&         
+        <div className='hidden xl:flex  w-full justify-between bg-colorfull-darkblue h-[45px] text-sm font-light z-[10]'>
+          <div className='flex justify-center items-center gap-8 ml-16'>
+            <div className='flex items-center justify-center text-white gap-2'>
+              <MdEmail size={15}/>
+              <p>emciartalents@gmail.com</p>
+            </div>
+            <div className='flex items-center justify-center text-white gap-2'>
+              <BsFillClockFill size={15}/>
+              <p>Mon - Fri: 9.00 am - 6.00 pm</p>
+            </div>
           </div>
-        </Popover>
-        <div className="flex justify-center items-center px-2 font-bold ml-10 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
-          <p>Contacts</p>
+          <div className='flex justify-center items-center gap-4 mr-16'>
+            <div className='flex items-center justify-center text-white'>
+              <p>Emciar is innately talented at connecting talents and clients.</p>
+            </div>
+              <FaLinkedinIn className="flex justify-center items-center text-white" size={15}/>
+          </div> 
         </div>
-      </div>
+      }
+        <div className="hidden xl:flex w-full h-[95px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)] bg-white z-[99]">
+          <Image
+            src="/images/emciar-logo.png"
+            width={90}
+            height={90}
+            alt="Logo"
+            className="ml-4 sm:ml-12 lg:ml-16 sm:p-2"
+          />
+          <Popover>
+            <div className="flex text-justify-center items-center px-2 font-bold ml-20 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
+              <PopoverTrigger>Home</PopoverTrigger>
+              <IoMdArrowDropdown />
+              <PopoverContent className="uppercase ml-[190px] mt-8 gap-1 z-[999]">
+                <div className="flex flex-col justify-center font-bold text-sm py-4">
+                  <div className="py-2 hover:text-blue-500">Recruitment</div>
+                  <div className="py-2 hover:text-blue-500">Job Counseling</div>
+                </div>
+              </PopoverContent>
+            </div>
+          </Popover>
+          <div className="flex justify-center items-center px-2 font-bold ml-10 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
+            <p>Contacts</p>
+          </div>
+        </div>
+    </div>
+
 
       <div className={
           nav

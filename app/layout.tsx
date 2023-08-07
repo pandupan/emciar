@@ -1,4 +1,3 @@
-import Header from '@/components/layout/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
@@ -22,7 +21,6 @@ export default function RootLayout({
       <>
         <body className={nunito_Sans.className}>
           <div className="overflow-x-hidden">
-            <Header/>
             <Navbar/>
               {children}
             <Footer/> 

@@ -91,15 +91,19 @@ const Navbar = () => {
               <IoMdArrowDropdown />
               <PopoverContent className="uppercase ml-[190px] mt-8 gap-1 z-[999]">
                 <div className="flex flex-col justify-center font-bold text-sm py-4">
-                  <div className="py-2 hover:text-blue-500">Recruitment</div>
-                  <div className="py-2 hover:text-blue-500">Job Counseling</div>
+                  <Link href="/recruitment" >
+                    <div className="py-2 hover:text-blue-500">Recruitment</div>
+                  </Link>
+                  <Link href="/counseling">
+                    <div className="py-2 hover:text-blue-500">Job Counseling</div>
+                  </Link>
                 </div>
               </PopoverContent>
             </div>
           </Popover>
-          <div className="flex justify-center items-center px-2 font-bold ml-10 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
+          <Link href="/contact" className="flex justify-center items-center px-2 font-bold ml-10 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
             <p>Contacts</p>
-          </div>
+          </Link>
         </div>
     </div>
 
@@ -135,15 +139,25 @@ const Navbar = () => {
                   <AccordionTrigger className="border-b-[1px] border-gray-200">Home</AccordionTrigger>
                   <AccordionContent>
                     <ul className="space-y-4 mt-4 pl-5"> 
-                      <li className="border-b-[1px] border-gray-200 pb-4">Recruitment</li>
-                      <li>Job Counseling</li>
+                      <li className="border-b-[1px] border-gray-200 pb-4">
+                        <Link href="/recruitment">
+                          Recruitment
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/counseling">
+                          Job Counseling
+                        </Link>
+                      </li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
             <div className="border-b-[1px] border-gray-200 pb-4">
-              Contacts
+              <Link href="contact">
+                Contacts
+              </Link>
             </div>
           </div>
         </div>

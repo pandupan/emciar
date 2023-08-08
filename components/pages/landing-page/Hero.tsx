@@ -26,7 +26,6 @@ const imageSlider = [
 ]
 const Hero = () => {
 
-
   const swiperRef = useRef(null);
 
   const slidePrev = () => {
@@ -44,6 +43,7 @@ const Hero = () => {
       swiperRef.current.swiper.slideNext();
     }
   };
+  
 
   return (
     <div className="relative flex justify-center items-center w-full h-[100vh] mt-0 sm:mt-2 md:mt-0 xl:mt-[140px] z-[1]">
@@ -111,7 +111,7 @@ const Hero = () => {
                             }}
                             style={{ display: 'inline-block', transformOrigin: 'center' }}
                           >
-                            {char}
+                            {char === ' ' ? '\u00A0' : char}
                           </motion.span>
                         ))}
                       </AnimatePresence>

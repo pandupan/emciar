@@ -2,10 +2,10 @@
 'use client'
 
 import { useRef } from 'react'
-import Image from 'next/image'
 import { Pagination, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import { motion, AnimatePresence } from 'framer-motion'
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -54,22 +54,86 @@ const Hero = () => {
         // pagination={{ clickable: true }}
         ref={swiperRef}
         autoplay={{
-          delay: 5000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         navigation={true}
         className="w-full h-full"
       >
-        {imageSlider.map((item)=>(
+        {imageSlider.map((item,id)=>(
           <SwiperSlide key={item.id}>
             <div className="container w-auto sm:ml-18 xl:ml-20 h-auto absolute text-white z-20">
-              <div className='mt-[110px] xl:mt-[210px] sm:p-20 sm:space-y-4'>
-                <h3 className='hidden md:block text-2xl font-normal'>{item.subsection}</h3>
+              <div className='mt-[110px] xl:mt-[130px] sm:p-20 sm:space-y-4'>
+                <motion.h3 
+                  className='hidden md:block text-2xl font-normal'
+                    initial={{ 
+                      opacity: 0,
+                      y : id % 2 === 1 ? -100 : 0,
+                      x : id % 2 === 1 ? 0 :100 
+                    }}
+                    whileInView={{ 
+                      opacity: 1,
+                      y: 0, 
+                      x:0 
+                    }}
+                    transition={{
+                      duration: 0.8
+                    }}
+                >
+                  {item.subsection}
+                </motion.h3>
                 <div className='space-y-2 sm:space-y-6'>
-                  <h1 className="text-xl sm:text-7xl xl:8xl font-black font-montserrat ">{item.section}</h1>
-                  <button className='text-xs sm:text-base w-[80px] h-[30px] sm:w-[150px] sm:h-[50px] bg-colorfull-lightblue hover:bg-colorfull-purple  sm:ml-32 z-[20]'>
+                  <motion.h1
+                      className="text-xl sm:text-7xl xl:8xl font-black font-montserrat"
+                      initial={{ 
+                        opacity: 0,
+                        y : id % 2 === 1 ? -100 : 0,
+                        x : id % 2 === 1 ? 0 :100 
+                      }}
+                      whileInView={{ 
+                        opacity: 1,
+                        y: 0, 
+                        x:0 
+                      }}
+                      transition={{
+                        duration: 0.8
+                      }}
+                    >
+                      <AnimatePresence>
+                        {item.section.split('').map((char, index) => (
+                          <motion.span
+                            key={index}
+                            initial={{ opacity: 0, rotate: 30 }} 
+                            whileInView={{ opacity: 1, rotate: 0 }}
+                            transition={{
+                              duration: 0.7,
+                              delay: index * 0.1,
+                            }}
+                            style={{ display: 'inline-block', transformOrigin: 'center' }}
+                          >
+                            {char}
+                          </motion.span>
+                        ))}
+                      </AnimatePresence>
+                  </motion.h1>
+                  <motion.button 
+                    className='text-xs sm:text-base w-[80px] h-[30px] sm:w-[150px] sm:h-[50px] bg-colorfull-lightblue hover:bg-colorfull-purple  sm:ml-32 z-[20]'
+                    initial={{ 
+                      opacity: 0,
+                      y : id % 2 === 1 ? -100 : 0,
+                      x : id % 2 === 1 ? 0 :100 
+                    }}
+                    whileInView={{ 
+                      opacity: 1,
+                      y: 0, 
+                      x:0 
+                    }}
+                    transition={{
+                      duration: 0.8
+                    }}
+                  >
                     Learn More
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>

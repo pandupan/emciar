@@ -6,7 +6,7 @@ import { FaHandshake } from "react-icons/fa";
 
 const Why = () => {
   return (
-    <div className="container mx-auto mt-64 md:mt-28 mb-12">
+    <div className="container mx-auto mt-40 sm:mt-64 md:mt-28 mb-12">
       <div>
         <h1 className="font-black sm:text-4xl text-2xl text-center sm:m-16 mb-28 ">
           Why Emciar?

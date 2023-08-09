@@ -78,13 +78,15 @@ const Navbar = () => {
         </div>
       }
         <div className="hidden xl:flex w-full h-[95px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)] bg-white z-[99]">
-          <Image
-            src="/images/emciar-logo.png"
-            width={90}
-            height={90}
-            alt="Logo"
-            className="ml-4 sm:ml-12 lg:ml-16 sm:p-2"
-          />
+          <Link href="/">          
+            <Image
+              src="/images/emciar-logo.png"
+              width={90}
+              height={90}
+              alt="Logo"
+              className="ml-4 sm:ml-12 lg:ml-16 sm:p-2"
+            />
+          </Link>
           <Popover>
             <div className="flex text-justify-center items-center px-2 font-bold ml-20 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
               <PopoverTrigger>Home</PopoverTrigger>
@@ -165,13 +167,15 @@ const Navbar = () => {
 
       {/*Search*/}
       <div className="xl:hidden flex justify-between items-center w-full sticky h-[90px] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.2)]">
-        <Image
-          src="/images/emciar-logo.png"
-          width={90}
-          height={90}
-          alt="Logo"
-          className="sm:ml-12 lg:ml-16 p-3"
-        />
+        <Link href="/">        
+          <Image
+            src="/images/emciar-logo.png"
+            width={90}
+            height={90}
+            alt="Logo"
+            className="sm:ml-12 lg:ml-16 p-3"
+          />
+        </Link>
         <div className="flex justify-center gap-4 mr-4 sm:mr-2 md:mr-8 ">
           <Popover>
             <PopoverTrigger className="xl:hidden">

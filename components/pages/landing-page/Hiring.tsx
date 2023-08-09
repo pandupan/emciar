@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hiring = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-[-250px] sm:mt-[50px] lg:mt-[60px]">
       <div className="">
         <p className="text-[#7141b1] sm:px-6 lg:px-24 px-0 md:text-sm sm:text-xs text-xs font-extrabold">
           HIRING MANDATES

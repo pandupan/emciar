@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const About = () => {
   return (
-    <div className="container mx-auto mt-20 mb-52">
+    <div className="container mx-auto mt-20 mb-16 sm:mb-24 md:mb-28">
       <div className="flex flex-col xl:flex-nowrap flex-wrap sm:flex-row sm:items-start items-center justify-center">
         <Image
           src="/images/about-image-1.png"

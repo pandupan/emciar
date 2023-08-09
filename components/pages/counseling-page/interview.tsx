@@ -10,10 +10,10 @@ const Interview = () => {
             Interview Counseling
           </h1>
         </div>
-        <div className="flex flex-col xl:flex-row xl:gap-12 justify-center">
+        <div className="container flex flex-col xl:flex-row xl:gap-12 justify-center mt-12">
           {/* LEFT */}
-          <div className="flex flex-col justify-center gap-8 items-center">
-            <div className="flex flex-row justify-center gap-8 items-center mt-6">
+          <div className="flex flex-col  lg:justify-start xl:justify-center gap-8 xl:items-center justify-start">
+            <div className="flex flex-row justify-start  gap-8 items-center mt-6 sm:w-[400px] w-[200px]">
               <Image
                 src="/images/impression.png"
                 width={50}
@@ -28,7 +28,7 @@ const Interview = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-row justify-center gap-8 items-center mt-6">
+            <div className="flex flex-row justify-start gap-8 items-center mt-6 sm:w-[400px] w-[200px]">
               <Image
                 src="/images/presenting.png"
                 width={50}
@@ -43,22 +43,26 @@ const Interview = () => {
             </div>
           </div>
           {/* MID */}
-          <div className="flex flex-row justify-center gap-8 items-center mt-6 xl:mt-0 mb-4">
-            <Image
-              src="/images/technical2.png"
-              width={40}
-              height={40}
-              alt="technical"
-              className="items-center"
-            />
-            <div className="flex flex-col">
-              <h1 className="text-xl font-extrabold mb-4">Technical</h1>
-              <p className="text-[#6d6d6d]">Update your functional knowledge</p>
+          <div className="flex flex-col lg:justify-start xl:justify-center xl:items-center gap-8 justify-start">
+            <div className="flex flex-row justify-start gap-8 items-center mt-6 xl:mt-0 mb-4 sm:w-[400px] w-[200px]">
+              <Image
+                src="/images/technical2.png"
+                width={40}
+                height={40}
+                alt="technical"
+                className="items-center"
+              />
+              <div className="flex flex-col sm:ml-0 ml-4">
+                <h1 className="text-xl font-extrabold mb-4">Technical</h1>
+                <p className="text-[#6d6d6d]">
+                  Update your functional knowledge
+                </p>
+              </div>
             </div>
           </div>
           {/* RIGHT */}
-          <div className="flex flex-col justify-center gap-8">
-            <div className="flex flex-row justify-center gap-8 items-center mt-6">
+          <div className="flex flex-col lg:justify-start xl:justify-center xl:items-center justify-start gap-8">
+            <div className="flex flex-row justify-start gap-8 items-center mt-6 sm:w-[400px] w-[200px]">
               <Image
                 src="/images/confidence.png"
                 width={50}
@@ -73,7 +77,7 @@ const Interview = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-row justify-center gap-8 items-center mt-6">
+            <div className="flex flex-row justify-start gap-8 items-center mt-6 sm:w-[400px] w-[200px]">
               <Image
                 src="/images/negotiation.png"
                 width={50}

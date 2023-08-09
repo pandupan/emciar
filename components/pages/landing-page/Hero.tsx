@@ -8,20 +8,22 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { motion, AnimatePresence } from 'framer-motion'
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import Link from 'next/link'
 
 const imageSlider = [
   {
     id:1,
     imageUrl:'https://i.ibb.co/tZnQVj1/slide-hero1.jpg',
     section:'RECRUITMENT', 
-    subsection:'All Talent Found'
+    subsection:'All Talent Found',
+    link:'/recruitment'
   },
   {
     id:2,
     imageUrl:'https://i.ibb.co/8sPRSb1/slide-hero2.jpg',
     section:'JOB COUNSELING',
-    subsection:'All Talent Conected'
+    subsection:'All Talent Conected',
+    link:'/counseling'
   }
 ]
 const Hero = () => {
@@ -116,24 +118,26 @@ const Hero = () => {
                         ))}
                       </AnimatePresence>
                   </motion.h1>
-                  <motion.button 
-                    className='text-xs sm:text-base w-[80px] h-[30px] sm:w-[150px] sm:h-[50px] bg-colorfull-lightblue hover:bg-colorfull-purple  sm:ml-32 z-[20]'
-                    initial={{ 
-                      opacity: 0,
-                      y : id % 2 === 1 ? -100 : 0,
-                      x : id % 2 === 1 ? 0 :100 
-                    }}
-                    whileInView={{ 
-                      opacity: 1,
-                      y: 0, 
-                      x:0 
-                    }}
-                    transition={{
-                      duration: 0.8
-                    }}
-                  >
-                    Learn More
-                  </motion.button>
+                  <Link href={item.link}>
+                    <motion.button 
+                      className='text-xs sm:text-base w-[80px] h-[30px] sm:w-[150px] sm:h-[50px] bg-colorfull-lightblue hover:bg-colorfull-purple  sm:ml-32 z-[20]'
+                      initial={{ 
+                        opacity: 0,
+                        y : id % 2 === 1 ? -100 : 0,
+                        x : id % 2 === 1 ? 0 :100 
+                      }}
+                      whileInView={{ 
+                        opacity: 1,
+                        y: 0, 
+                        x:0 
+                      }}
+                      transition={{
+                        duration: 0.8
+                      }}
+                    >
+                      Learn More
+                    </motion.button>
+                  </Link>
                 </div>
               </div>
             </div>

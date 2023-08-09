@@ -6,7 +6,7 @@ import { PiPhoneCallFill } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <div className=" bg-colorfull-darkpurple pb-6 h-auto">
+    <div className=" relative bg-colorfull-darkpurple pb-6 h-auto">
       <div className="flex flex-col items-center">
         <Image
           src="/images/emciar-logo.png"
@@ -58,11 +58,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-6">
-        <p className="text-blue-500 text-center text-base font-bold rounded-full bg-white w-[24px] h-[24px]">
-          in
-        </p>
-      </div>
+      <div className="absolute sm:top-5 sm:right-64 top-5 right-5 flex justify-center mt-6">
+          <p className="text-blue-500 text-center text-base font-extrabold rounded-full bg-white w-[24px] h-[24px]">
+            in
+          </p>
+        </div>
     </div>
   );
 };

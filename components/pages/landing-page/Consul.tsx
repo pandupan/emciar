@@ -13,7 +13,7 @@ const consultantImage =[
 
 const  Consul = () => {
   return (
-    <div className='relative flex justify-center items-center w-full h-[45vh] lg:[60vh] mb-[-49px] md:mb-0 lg:mb-[65px] xl:mb-[112px] z-[1]'>
+    <div className='relative flex justify-center items-center w-full h-[45vh] lg:[60vh] mb-[-49px] md:mb-0 lg:mb-[130px] xl:mb-[112px] z-[1]'>
       {consultantImage.map((item,id)=>(
         <>
           <div 

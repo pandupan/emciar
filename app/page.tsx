@@ -2,7 +2,7 @@ import Hiring from '../components/pages/landing-page/Hiring'
 import Why from '@/components/pages/landing-page/Why'
 import Hero from '@/components/pages/landing-page/Hero'
 import About from '@/components/pages/landing-page/About'
-import Consultant from '@/components/pages/landing-page/Consultant'
+import Consul from '@/components/pages/landing-page/Consul'
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Hiring/>
       <Why/>
       <About/>
-      <Consultant/>
+      <Consul/>
     </>
   )
 }

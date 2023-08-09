@@ -11,7 +11,7 @@ const consultantImage =[
   }
 ]
 
-const  Consultant = () => {
+const  Consul = () => {
   return (
     <div className='relative flex justify-center items-center w-full h-[45vh] lg:[55vh] mb-[-49px] md:mb-0 lg:mb-[65px] xl:mb-[70px] z-[1]'>
       {consultantImage.map((item,id)=>(
@@ -46,4 +46,4 @@ const  Consultant = () => {
   )
 }
 
-export default Consultant
+export default Consul

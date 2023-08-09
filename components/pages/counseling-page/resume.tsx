@@ -10,8 +10,8 @@ const Resume = () => {
             Resume Assistance
           </h1>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-32 sm:items-start mt-16">
-          <div className="flex flex-col justify-center items-center w-[170px] text-center">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-20 sm:gap-20 lg:gap-28 xl:gap-32 sm:items-start sm:mt-32 xl:mt-16 mt-28">
+          <div className="flex flex-col justify-center items-center sm:w-[100px] md:w-[125px] xl:w-[170px] w-[170px] text-center">
             <Image
               src="/images/analysis.png"
               width={50}
@@ -24,7 +24,7 @@ const Resume = () => {
             </h1>
             <p className="text-[#6d6d6d]">Locating talent in 180+ countries</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[170px] text-center">
+          <div className="flex flex-col justify-center items-center sm:w-[100px] md:w-[125px] xl:w-[170px] w-[170px] text-center">
             <Image
               src="/images/Hiring-buzzwords.png"
               width={50}
@@ -39,7 +39,7 @@ const Resume = () => {
               Jupiter is gas giant and the biggest planet
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[170px] text-center">
+          <div className="flex flex-col justify-center items-center sm:w-[100px] md:w-[125px] xl:w-[170px] w-[170px] text-center">
             <Image
               src="/images/CV-posting.png"
               width={50}
@@ -52,7 +52,7 @@ const Resume = () => {
               Job board selection and profile creations
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[170px] text-center">
+          <div className="flex flex-col justify-center items-center sm:w-[100px] md:w-[125px] xl:w-[170px] w-[170px] text-center">
             <Image
               src="/images/CV-Distribution.png"
               width={50}

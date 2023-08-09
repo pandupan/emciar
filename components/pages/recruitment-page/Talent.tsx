@@ -10,7 +10,7 @@ import { MdEmojiPeople } from 'react-icons/md'
 const Talent = () => {
   return (
     <div className="bg-colorfull-darkpurple flex justify-center mx-auto">
-      <div className="container flex mt-32 mb-64 flex-col sm:flex-row w-full justify-center items-center sm:items-start flex-wrap">
+      <div className="container flex mt-32 mb-44 flex-col sm:flex-row w-full justify-center items-center sm:items-start flex-wrap">
         <div className="flex flex-col">
           <h1 className="sm:text-4xl text-3xl font-black text-white xl:w-[600px]">
             Talent Acquisition: Our Capabilities

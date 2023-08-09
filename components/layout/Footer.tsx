@@ -20,14 +20,14 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row  justify-center mt-[100px] ">
+      <div className="flex flex-col sm:flex-row justify-center mt-[100px] container  lg:w-full ">
         {/* Mailbox */}
-        <div className="flex flex-col items-center  p-2 sm:w-[400px] w-full ">
+        <div className="flex flex-col items-center sm:w-[400px] w-full ">
           <div className="text-colorfull-lightblue">
             <MdEmail size={36} />
           </div>
           <div className="flex flex-col justify-center items-center sm:w-[200px] w-full">
-            <p className="text-lg text-white my-6">emciartalents@gmail.com</p>
+            <p className="text-lg text-white my-6  ">emciartalents@gmail.com</p>
             <p className="text-colorfull-lightpurple text-center">
               Our Mailbox
             </p>
@@ -38,8 +38,8 @@ const Footer = () => {
           <div className="text-colorfull-lightblue sm:mt-0 mt-2">
             <FaGlobe size={36} />
           </div>
-          <div className="flex flex-col justify-center items-center sm:w-[400px] w-[200px]">
-            <p className="text-lg text-white my-6 text-center">
+          <div className="flex flex-col justify-center items-center lg:w-[400px] w-[200px] ">
+            <p className="text-lg text-white my-6 text-center  w-[200px] xl:w-full">
               Bldg#20C Sector 87, Faridabad, Haryana - 121002
             </p>
             <p className="text-colorfull-lightpurple text-center">

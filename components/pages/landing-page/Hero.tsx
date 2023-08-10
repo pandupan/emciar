@@ -48,7 +48,7 @@ const Hero = () => {
   
 
   return (
-    <div className="relative flex justify-center items-center w-full h-[100vh] mt-0 sm:mt-2 md:mt-0 xl:mt-[140px] z-[1]">
+    <div className="relative flex justify-center items-center w-full h-[450px] sm:h-[650px] xl:mt-32 z-[1]">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={10}
@@ -64,8 +64,8 @@ const Hero = () => {
       >
         {imageSlider.map((item,id)=>(
           <SwiperSlide key={item.id}>
-            <div className="container w-auto sm:ml-18 xl:ml-20 h-auto absolute text-white z-20">
-              <div className='mt-[110px] xl:mt-[130px] sm:p-20 sm:space-y-4'>
+            <div className="container absolute inset-0 flex items-center xl:px-20 text-white z-20">
+              <div className='sm:space-y-4'>
                 <motion.h3 
                   className='hidden md:block text-2xl font-normal'
                     initial={{ 
@@ -86,7 +86,7 @@ const Hero = () => {
                 </motion.h3>
                 <div className='space-y-2 sm:space-y-6'>
                   <motion.h1
-                      className="text-xl sm:text-7xl xl:8xl font-black font-montserrat"
+                      className="text-3xl sm:text-5xl md:text-7xl xl:8xl font-black font-montserrat"
                       initial={{ 
                         opacity: 0,
                         y : id % 2 === 1 ? -100 : 0,
@@ -120,7 +120,7 @@ const Hero = () => {
                   </motion.h1>
                   <Link href={item.link}>
                     <motion.button 
-                      className='text-xs sm:text-base w-[80px] h-[30px] sm:w-[150px] sm:h-[50px] bg-colorfull-lightblue hover:bg-colorfull-purple  sm:ml-32 z-[20]'
+                      className='mt-10 md:ml-24 text-sm sm:text-lg px-6 py-3 bg-colorfull-lightblue hover:bg-colorfull-purple z-[20]'
                       initial={{ 
                         opacity: 0,
                         y : id % 2 === 1 ? -100 : 0,
@@ -150,7 +150,7 @@ const Hero = () => {
               </button>
             </div>
             <div
-              className='w-full sm:h-[100vh] h-[350px] z-[2] absolute bg-no-repeat top-0 right-0 bg-center bg-cover'
+              className='absolute inset-0 z-[2] bg-cover'
               style={{
                 backgroundImage: `url(${item.imageUrl})`,
               }}

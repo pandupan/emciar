@@ -1,10 +1,17 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
+import { usePathname } from 'next/navigation'
 import { MdEmail } from "react-icons/md";
 import { FaGlobe } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  if (pathname === '/contact') return null;
+
   return (
     <div className=" relative bg-colorfull-darkpurple pb-6 h-auto">
       <div className="flex flex-col items-center">

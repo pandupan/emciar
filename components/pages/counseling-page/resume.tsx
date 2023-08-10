@@ -54,7 +54,7 @@ const Resume = () => {
           </div>
           <div className="flex flex-col justify-center items-center sm:w-[100px] md:w-[125px] xl:w-[170px] w-[170px] text-center">
             <Image
-              src="/images/CV-Distribution.png"
+              src="/images/CV-distribution.png"
               width={50}
               height={50}
               alt="CV-Distribution"

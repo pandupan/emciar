@@ -141,16 +141,16 @@ const Navbar = () => {
                   <AccordionTrigger className="border-b-[1px] border-gray-200">Home</AccordionTrigger>
                   <AccordionContent>
                     <ul className="space-y-4 mt-4 pl-5"> 
-                      <li className="border-b-[1px] border-gray-200 pb-4">
-                        <Link href="/recruitment">
+                        <Link href="/recruitment" onClick={handleNav}>
+                          <li className="border-b-[1px] border-gray-200 pb-4 mb-2">
                           Recruitment
+                          </li>
                         </Link>
-                      </li>
-                      <li>
-                        <Link href="/counseling">
+                        <Link href="/counseling" onClick={handleNav}>
+                          <li>
                           Job Counseling
+                          </li>
                         </Link>
-                      </li>
                     </ul>
                   </AccordionContent>
                 </AccordionItem>

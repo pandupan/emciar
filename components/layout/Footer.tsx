@@ -65,11 +65,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="absolute sm:top-5 sm:right-64 top-5 right-5 flex justify-center mt-6">
-          <p className="text-blue-500 text-center text-base font-extrabold rounded-full bg-white w-[24px] h-[24px]">
-            in
-          </p>
-        </div>
+      <div className="flex items-center justify-center mt-4">
+      <a
+        href="https://www.linkedin.com/company/emciar"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 text-center text-base font-extrabold rounded-full bg-white w-[24px] h-[24px] flex items-center justify-center"
+      >
+        <span>in</span>
+      </a>
+    </div>
     </div>
   );
 };

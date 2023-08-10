@@ -4,7 +4,16 @@ import Image from "next/image";
 const Hiring = () => {
   return (
     <div className="container mx-auto mt-8 ">
-      <div className="">
+      <div className="relative">
+        {/* LEFT */}
+        <div className="absolute -left-[300px] -top-[30px] hidden sm:flex justify-center items-center w-1/2 z-[-1]">
+          <Image
+            src="/images/bg-art2-home4.png"
+            width={400}
+            height={400}
+            alt="Decorative Background"
+          />
+        </div>
         <p className="text-[#7141b1] sm:px-6 lg:px-24 px-0 md:text-sm sm:text-xs text-xs font-extrabold">
           HIRING MANDATES
         </p>
@@ -83,6 +92,16 @@ const Hiring = () => {
               Reception, Support and Facilities Staff
             </p>
           </div>
+        </div>
+        {/* RIGHT */}
+        <div className="absolute -right-[350px] -bottom-[70px] hidden sm:flex justify-center items-center w-1/2">
+          <Image
+            src="/images/bg-art2-home4.png"
+            width={400}
+            height={400}
+            alt="Decorative Background"
+            className="transform scale-x-[-1] scale-y-[-1]"
+          />
         </div>
       </div>
     </div>

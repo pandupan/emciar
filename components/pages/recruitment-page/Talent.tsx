@@ -54,62 +54,61 @@ const Talent = () => {
             </li>
           </ol>
         </div>
-        <div className="flex flex-col">
 
-        <div className="flex flex-col sm:flex-row gap-8 mt-8 ">
-        <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-[230px] md:w-[200px] lg:w-[270px]">
-            <div className="m-4">
-              <AiOutlineFileSearch size={40} />
+        <div className="w-full sm:w-auto flex flex-col">
+          <div className="w-full flex flex-col sm:flex-row gap-8 mt-8">
+            <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-full md:w-[200px] lg:w-[270px]">
+              <div className="m-4">
+                <AiOutlineFileSearch size={40} />
+              </div>
+              <h2 className="text-center text-white font-bold text-md">
+                SOURCING
+              </h2>
             </div>
-            <h2 className="text-center text-white font-bold text-md">
-              SOURCING
-            </h2>
-          </div>
-          <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-[230px] md:w-[200px] lg:w-[270px]">
-            <div className="m-4">
-              <AiOutlineBarChart size={40} />
+            <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-full md:w-[200px] lg:w-[270px]">
+              <div className="m-4">
+                <AiOutlineBarChart size={40} />
+              </div>
+              <h2 className="text-center text-white font-bold text-md">
+                SCREENING
+              </h2>
             </div>
-            <h2 className="text-center text-white font-bold text-md">
-              SCREENING
-            </h2>
-          </div>
-          <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-[230px] md:w-[200px] lg:w-[270px]">
-            <div className="text-[#43baff] hover:text-white m-4">
-              <FaChalkboardTeacher size={40} />
+            <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-full md:w-[200px] lg:w-[270px]">
+              <div className="text-[#43baff] hover:text-white m-4">
+                <FaChalkboardTeacher size={40} />
+              </div>
+              <h2 className="text-center text-white font-bold text-md">
+                INTERVIEWING
+              </h2>
             </div>
-            <h2 className="text-center text-white font-bold text-md">
-              INTERVIEWING
-            </h2>
           </div>
-        </div>
 
-        <div className="flex flex-col sm:flex-row gap-8 mt-8 ">
-        <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-[230px] md:w-[200px] lg:w-[270px]">
-            <div className="m-4">
-              <FaUserPlus size={40} />
+          <div className="flex flex-col sm:flex-row gap-8 mt-8 ">
+            <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-full md:w-[200px] lg:w-[270px]">
+              <div className="m-4">
+                <FaUserPlus size={40} />
+              </div>
+              <h2 className="text-center text-white font-bold text-md">
+                ASSESSMENTS
+              </h2>
             </div>
-            <h2 className="text-center text-white font-bold text-md">
-              ASSESSMENTS
-            </h2>
-          </div>
-          <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-[230px] md:w-[200px] lg:w-[270px]">
-            <div className="m-4">
-              <MdEmojiPeople size={40} />
+            <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-full md:w-[200px] lg:w-[270px]">
+              <div className="m-4">
+                <MdEmojiPeople size={40} />
+              </div>
+              <h2 className="text-center text-white font-bold text-md">
+                ONBOARDING
+              </h2>
             </div>
-            <h2 className="text-center text-white font-bold text-md">
-              ONBOARDING
-            </h2>
-          </div>
-          <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-[230px] md:w-[200px] lg:w-[270px]">
-            <div className="m-4">
-              <IoMdSettings size={40} />
+            <div className="flex items-center justify-center flex-col text-[#43baff] hover:text-white border border-[#646276] hover:border-[#43baff] xl:w-[170px] h-[150px] w-full md:w-[200px] lg:w-[270px]">
+              <div className="m-4">
+                <IoMdSettings size={40} />
+              </div>
+              <h2 className="text-center text-white font-bold text-md">
+                RPO°
+              </h2>
             </div>
-            <h2 className="text-center text-white font-bold text-md">
-              RPO°
-            </h2>
           </div>
-        </div>
-        
         </div>
       </div>
     </div>

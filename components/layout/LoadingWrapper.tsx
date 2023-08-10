@@ -21,6 +21,7 @@ function LoadingWrapper({ children }: { children: React.ReactNode }) {
         width={200}
         height={200}
         alt="Emciar Logo"
+        className="animate-pulse"
       />
     </div>
   ) : children

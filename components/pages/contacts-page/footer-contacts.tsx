@@ -13,9 +13,14 @@ const FooterContacts = () => {
           className="mt-4"
         />
         <div className="absolute sm:top-20 sm:right-64 top-20 right-5 flex justify-center mt-6">
-          <p className="text-[#666666] text-center text-base font-extrabold rounded-full bg-white w-[24px] h-[24px]">
-            in
-          </p>
+          <a
+            href="https://www.linkedin.com/company/emciar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#666666] text-center text-base font-extrabold rounded-full bg-white w-[24px] h-[24px] flex items-center justify-center"
+          >
+            <span>in</span>
+          </a>
         </div>
       </div>
       <p className="mt-4 text-center text-lg text-[#6d6d80] pt-8 mb-14">

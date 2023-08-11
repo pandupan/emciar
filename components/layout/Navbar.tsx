@@ -27,6 +27,16 @@ const Navbar = () => {
   const [searchOpen, setSearchOpen] = React.useState(true);
   const [nav, setNav] = React.useState(false);
   const [header, setHeader] = React.useState(true);
+  const [popoverOpened, setPopoverOpened] = React.useState(false);
+  const [accordionOpenedMobile, setAccordionOpenedMobile] = React.useState(false);
+
+  const handlePopoverOpen = () => {
+    setPopoverOpened(!popoverOpened);
+  };
+
+  const handleAccordionToggle = () => {
+    setAccordionOpenedMobile(!accordionOpenedMobile);
+  }; 
 
   const toggleSearch = () => {
     setSearchOpen((prevSearchOpen) => !prevSearchOpen);
@@ -88,12 +98,21 @@ const Navbar = () => {
             />
           </Link>
           <Popover>
-            <div className="flex text-justify-center items-center px-2 font-bold ml-20 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
-              <PopoverTrigger>Home</PopoverTrigger>
+            <div
+              className="flex text-justify-center items-center px-2 font-bold ml-20 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold"
+              onClick={handlePopoverOpen}
+            >
+              <PopoverTrigger>       
+                { popoverOpened ? (
+                  <Link href="/">Home</Link>
+                ) : (
+                  <span>Home</span>
+                )}
+              </PopoverTrigger>
               <IoMdArrowDropdown />
               <PopoverContent className="uppercase ml-[190px] mt-8 gap-1 z-[999]">
                 <div className="flex flex-col justify-center font-bold text-sm py-4">
-                  <Link href="/recruitment" >
+                  <Link href="/recruitment">
                     <div className="py-2 hover:text-blue-500">Recruitment</div>
                   </Link>
                   <Link href="/counseling">
@@ -138,7 +157,16 @@ const Navbar = () => {
             <div className="text-sm my-4">
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="border-b-[1px] border-gray-200">Home</AccordionTrigger>
+                  <AccordionTrigger 
+                    className="border-b-[1px] border-gray-200"
+                    onClick={handleAccordionToggle}
+                  >
+                  { accordionOpenedMobile ? (
+                      <Link href="/">Home</Link>
+                    ) : (
+                      <span>Home</span>
+                    )}
+                  </AccordionTrigger>
                   <AccordionContent>
                     <ul className="space-y-4 mt-4 pl-5"> 
                         <Link href="/recruitment" onClick={handleNav}>
@@ -157,7 +185,7 @@ const Navbar = () => {
               </Accordion>
             </div>
             <div className="border-b-[1px] border-gray-200 pb-4">
-              <Link href="contact">
+              <Link href="contact" onClick={handleNav}>
                 Contacts
               </Link>
             </div>
@@ -177,18 +205,6 @@ const Navbar = () => {
           />
         </Link>
         <div className="flex justify-center gap-4 mr-4 sm:mr-2 md:mr-8 ">
-          <Popover>
-            <PopoverTrigger className="xl:hidden">
-              {searchOpen ? (
-                <AiOutlineSearch size={25} onClick={toggleSearch} />
-              ) : (
-                <AiOutlineClose size={25} onClick={toggleSearch} />
-              )}
-            </PopoverTrigger>
-            <PopoverContent className="mt-[30px] lg:hidden">
-              <Input placeholder="Search..." />
-            </PopoverContent>
-          </Popover>
           <div onClick={handleNav}>
             {nav ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
           </div>

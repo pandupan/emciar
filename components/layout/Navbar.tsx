@@ -24,7 +24,6 @@ import { FaLinkedinIn } from 'react-icons/fa'
 
 
 const Navbar = () => {
-  const [searchOpen, setSearchOpen] = React.useState(true);
   const [nav, setNav] = React.useState(false);
   const [header, setHeader] = React.useState(true);
   const [popoverOpened, setPopoverOpened] = React.useState(false);
@@ -37,10 +36,6 @@ const Navbar = () => {
   const handleAccordionToggle = () => {
     setAccordionOpenedMobile(!accordionOpenedMobile);
   }; 
-
-  const toggleSearch = () => {
-    setSearchOpen((prevSearchOpen) => !prevSearchOpen);
-  };
 
   const handleNav = () => {
     setNav(!nav);
@@ -97,34 +92,24 @@ const Navbar = () => {
               className="ml-4 sm:ml-12 lg:ml-16 sm:p-2"
             />
           </Link>
-          <Popover>
-            <div
-              className="flex text-justify-center items-center px-2 font-bold ml-20 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold"
-              onClick={handlePopoverOpen}
-            >
-              <PopoverTrigger>       
-                { popoverOpened ? (
-                  <Link href="/">Home</Link>
-                ) : (
-                  <span>Home</span>
-                )}
-              </PopoverTrigger>
-              <IoMdArrowDropdown />
-              <PopoverContent className="uppercase ml-[190px] mt-8 gap-1 z-[999]">
-                <div className="flex flex-col justify-center font-bold text-sm py-4">
-                  <Link href="/recruitment">
-                    <div className="py-2 hover:text-blue-500">Recruitment</div>
-                  </Link>
-                  <Link href="/counseling">
-                    <div className="py-2 hover:text-blue-500">Job Counseling</div>
-                  </Link>
-                </div>
-              </PopoverContent>
+          <div className="relative flex justify-center items-center px-2 font-bold ml-10 border-b-2 border-white hover:border-blue-500 transform hover:mt-2 hover:font-bold transition group">
+            <Link href="/" className="hover:text-blue-500 hover:scale-110 transition">
+              Home
+            </Link>
+            <div className="hidden group-hover:flex absolute -bottom-[135%] left-0 w-[200px] bg-white shadow-lg px-8 flex-col justify-center font-bold py-4">
+              <Link href="/recruitment">
+                <div className="py-2 hover:text-blue-500">Recruitment</div>
+              </Link>
+              <Link href="/counseling">
+                <div className="py-2 hover:text-blue-500 whitespace-nowrap">Job Counseling</div>
+              </Link>
             </div>
-          </Popover>
-          <Link href="/contact" className="flex justify-center items-center px-2 font-bold ml-10 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 transform hover:scale-110 hover:mt-2 hover:font-bold">
-            <p>Contacts</p>
-          </Link>
+          </div>
+          <div className="relative flex justify-center items-center px-2 font-bold ml-10 border-b-2 border-white hover:border-blue-500 transform hover:mt-2 hover:font-bold transition">
+            <Link href="/contact" className="hover:text-blue-500 hover:scale-110 transition">
+              Contact
+            </Link>
+          </div>
         </div>
     </div>
 
